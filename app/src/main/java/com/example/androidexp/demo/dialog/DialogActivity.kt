@@ -43,6 +43,10 @@ class DialogActivity : BaseActivity() {
     }
 
 
+    private val bottomSheetDialog:BottomSheetDialog by lazy {
+        BottomSheetDialog()
+    }
+
     private var shareList = mutableListOf<String>()
     private val bottomShareDialog:BottomShareDialog by lazy {
        BottomShareDialog(this,shareList,object :BottomShareDialog.OnClickListener{
@@ -97,5 +101,8 @@ class DialogActivity : BaseActivity() {
             }
         }
 
+        btn_bottom_sheet.onClick {
+            bottomSheetDialog.show(this@DialogActivity.supportFragmentManager,"BottomSheetDialog")
+        }
     }
 }
