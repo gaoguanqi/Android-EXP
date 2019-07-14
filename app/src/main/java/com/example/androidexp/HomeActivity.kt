@@ -26,6 +26,7 @@ class HomeActivity : BaseActivity() {
         refreshLayout.setColorSchemeResources(R.color.colorPrimary,R.color.colorAccent,R.color.colorPrimaryDark)
         refreshLayout.setOnRefreshListener{
             onRefresh()
+
         }
 
         showView()
@@ -44,6 +45,7 @@ class HomeActivity : BaseActivity() {
         })
         recyclerView.adapter = adapter
         hideView()
+
     }
 
 
