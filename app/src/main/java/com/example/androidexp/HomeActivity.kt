@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.blankj.utilcode.util.ActivityUtils
 import com.example.androidexp.demo.dialog.DialogActivity
+import com.example.androidexp.demo.expand.ExpandActivity
 import com.example.mapleplayer.app.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -40,6 +41,7 @@ class HomeActivity : BaseActivity() {
             override fun onClick(position:Int) {
                 when(position){
                     0-> ActivityUtils.startActivity(DialogActivity::class.java)
+                    1-> ActivityUtils.startActivity(ExpandActivity::class.java)
                 }
             }
         })
