@@ -39,5 +39,6 @@ dependencies {
 
     implementation "org.jetbrains.anko:anko:$anko_version"
 
-    implementation 'com.blankj:utilcodex:1.24.7'
+    implementation 'com.blankj:utilcodex:1.25.5'
+    implementation 'com.google.code.gson:gson:2.8.5'
 }
