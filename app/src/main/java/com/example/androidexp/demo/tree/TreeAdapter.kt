@@ -4,8 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidexp.R
 import kotlinx.android.synthetic.main.item_tree.view.*
@@ -22,9 +20,10 @@ class TreeAdapter : RecyclerView.Adapter<TreeAdapter.ViewHolder> {
         this.mContext = context
     }
 
-    fun setListener(listener: OnItemClickListener){
+    fun setListener(listener: OnItemClickListener) {
         this.mListener = listener
     }
+
     fun setData(data: List<CityEntity>?) {
         this.mData = data
         this.notifyDataSetChanged()
@@ -37,7 +36,7 @@ class TreeAdapter : RecyclerView.Adapter<TreeAdapter.ViewHolder> {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.setData(mData?.get(position))
-        holder.itemView.item_root.onClick { mListener?.onItemClick(position,mData?.get(position)) }
+        holder.itemView.item_root.onClick { mListener?.onItemClick(position, mData?.get(position)) }
     }
 
     override fun getItemCount(): Int {
@@ -48,14 +47,17 @@ class TreeAdapter : RecyclerView.Adapter<TreeAdapter.ViewHolder> {
         constructor(itemView: View) : super(itemView)
 
         fun setData(entity: CityEntity?) {
-            if(entity == null) return
+            if (entity == null) return
             itemView.item_tv_name.text = entity.name
-            itemView.item_iv_arrow.background = if(entity.isSelected) mContext.resources.getDrawable(R.drawable.ic_arrow_down) else mContext.resources.getDrawable(R.drawable.ic_arrow_next)
+            itemView.item_iv_arrow.background =
+                if (entity.isSelected) mContext.resources.getDrawable(R.drawable.ic_arrow_down) else mContext.resources.getDrawable(
+                    R.drawable.ic_arrow_next
+                )
         }
     }
 
 
-    interface OnItemClickListener{
-        fun onItemClick(pos:Int,entnty:CityEntity?)
+    interface OnItemClickListener {
+        fun onItemClick(pos: Int, entnty: CityEntity?)
     }
 }

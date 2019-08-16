@@ -12,8 +12,16 @@ public class CityEntity {
 
     private String code;
     private String name;
+    private List<ProvinceBean> children;
     private boolean isSelected;
-    private List<ChildrenBeanX> children;
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
 
     public String getCode() {
         return code;
@@ -31,23 +39,15 @@ public class CityEntity {
         this.name = name;
     }
 
-    public boolean isSelected() {
-        return isSelected;
-    }
-
-    public void setSelected(boolean selected) {
-        isSelected = selected;
-    }
-
-    public List<ChildrenBeanX> getChildren() {
+    public List<ProvinceBean> getChildren() {
         return children;
     }
 
-    public void setChildren(List<ChildrenBeanX> children) {
+    public void setChildren(List<ProvinceBean> children) {
         this.children = children;
     }
 
-    public static class ChildrenBeanX {
+    public static class ProvinceBean {
         /**
          * code : 110100
          * name : 市辖区
@@ -57,6 +57,15 @@ public class CityEntity {
         private String code;
         private String name;
         private List<ChildrenBean> children;
+        private boolean isSelected;
+
+        public boolean isSelected() {
+            return isSelected;
+        }
+
+        public void setSelected(boolean selected) {
+            isSelected = selected;
+        }
 
         public String getCode() {
             return code;
@@ -90,6 +99,15 @@ public class CityEntity {
 
             private String code;
             private String name;
+            private boolean isSelected;
+
+            public boolean isSelected() {
+                return isSelected;
+            }
+
+            public void setSelected(boolean selected) {
+                isSelected = selected;
+            }
 
             public String getCode() {
                 return code;

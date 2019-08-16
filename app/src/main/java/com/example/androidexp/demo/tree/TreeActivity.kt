@@ -28,10 +28,11 @@ class TreeActivity : BaseActivity() {
         super.initData(savedInstanceState)
         recyclerView.layoutManager = manager
         recyclerView.adapter = adapter
-        adapter.setListener(object :TreeAdapter.OnItemClickListener{
+        adapter.setListener(object : TreeAdapter.OnItemClickListener {
             override fun onItemClick(pos: Int, entnty: CityEntity?) {
-                if(entnty == null) return
-                entnty.isSelected = entnty.isSelected.let { !it}
+                if (entnty == null) return
+                entnty.isSelected = entnty.isSelected.let { !it }
+
                 adapter.notifyItemChanged(pos)
             }
         })
@@ -49,5 +50,4 @@ class TreeActivity : BaseActivity() {
         }
         return data
     }
-
 }
