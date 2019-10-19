@@ -56,4 +56,5 @@ dependencies {
 
     implementation 'com.blankj:utilcodex:1.25.9'
     implementation 'com.google.code.gson:gson:2.8.6'
+
 }
