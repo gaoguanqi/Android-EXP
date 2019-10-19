@@ -12,25 +12,6 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="DialogCommon" parent="Theme.AppCompat.Light.Dialog">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/transparent</item>
-    </style>
 
-    <style name="DialogBottom" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
-        <item name="android:windowAnimationStyle">@style/StyleBottom</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/transparent</item>
-    </style>
-
-    <style name="StyleBottom" parent="android:Animation" mce_bogus="1" >
-        <item name="android:windowEnterAnimation">@anim/anim_dialog_up</item>
-        <item name="android:windowExitAnimation">@anim/anim_dialog_down</item>
-    </style>
-
-    <style name="StyleCommon" parent="android:Animation" mce_bogus="1" >
-        <item name="android:windowEnterAnimation">@anim/anim_dialog_in</item>
-        <item name="android:windowExitAnimation">@anim/anim_dialog_out</item>
-    </style>
 </resources>
 
